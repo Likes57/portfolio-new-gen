@@ -1,0 +1,64 @@
+:root
+    --bg: #16161a
+    --panel: #26262b
+    --muted: #9aa0a6
+    --accent-1: #f15b5b
+    --accent-2: #3cd3d3
+    --card: #111214
+    --glass: rgba(255,255,255,0.04)
+    --max-width: 1200px
+    --gutter: 24px
+
+*
+    box-sizing: border-box
+
+html,body,#root
+    height: 100%
+
+body
+    margin: 0
+    background: $bg-color
+    color: #fff
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.page
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.container
+    width: 100%
+    max-width: 1200px
+    padding: 0 var(--gutter)
+    margin: 0 auto
+
+.section
+    width: 100%
+    padding: 40px 0 60px 0
+
+.section-title
+    font-size: 75px
+    font-weight: 600
+    text-align: center
+    margin-bottom: 35px
+    letter-spacing: 1px
+
+.header-bg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 75px
+    z-index: 101
+    background-color: rgba(30, 31, 38, 0.9)
+
+@media(max-width&:1100px)
+    .works
+        grid-template-columns: 1fr 360px
+        
+@media(max-width &:900px)
+    .expertise-grid
+        grid-template-columns: 1fr 520px
+    .portfolio-grid
+        grid-template-columns: 1fr

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* Сторінка категорії */
+.category-page {
+  padding: 95px 0 0 0;
+}
+
+.category-page-title {
+  margin: 30px 0;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 40px 0 40px 0;
+}
+
+/* Стилі для карток товарів */
+.product-card {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 410px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-image-container {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  height: 90%;
+  object-fit: contain;
+}
+
+.product-content {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: var(--dark-color);
+  height: 40px;
+}
+
+.product-brand {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.product-price-old {
+  text-decoration: line-through;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.product-description {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-rating-score {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: var(--dark-color);
+  gap: 5px;
+  margin-right: 5px;
+}
+.product-rating-score svg {
+  fill: #ff9826;
+  color: #ff9826;
+}
+
+.product-rating-count {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+
+.product-colors {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.product-color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.product-specs {
+  margin-bottom: 10px;
+}
+
+.product-spec {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+  margin-bottom: 3px;
+}
+
+/*# sourceMappingURL=mainPage.css.map */

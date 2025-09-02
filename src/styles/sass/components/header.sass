@@ -1,0 +1,31 @@
+.header
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr auto 1fr /* три зоны */
+    position: fixed
+    z-index: 103
+    padding: 20px 50px
+    align-items: center
+.logo
+    grid-column: 1
+    img
+        height: 35px
+.nav-container
+    grid-column: 2
+    .nav
+        display: flex
+        gap: 60px
+        counter-reset: link-counter
+        a
+            font-size: 25px
+            color: $text-color
+            text-decoration: none
+            position: relative
+            &::before
+                position: absolute
+                right: -25px
+                top: -8px
+                counter-increment: link-counter
+                content: counter(link-counter, decimal-leading-zero) " "
+                color: gray
+                font-size: 14px

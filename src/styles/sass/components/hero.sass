@@ -1,0 +1,46 @@
+.hero
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    overflow: hidden
+    margin-bottom: 40px
+    min-height: 320px
+    background-color: rgba(10,15,18,0.95)
+    z-index: 102
+    &::before
+        content: ""
+        position: absolute
+        inset: 0
+        background: linear-gradient(135deg, rgba(20,35,40,0.85) 0%, rgba(10,15,18,0.9) 100%)
+        z-index: 0
+
+.hero-center
+    position: relative
+    z-index: 2
+    text-align: center
+    padding: 60px 20px
+    .brand, .hero-red, .hero-blue
+        font-weight: 100
+        font-family: Jaro, serif
+        font-size: 120px
+    .brand
+        line-height: 0.6
+        letter-spacing: 4px
+    .hero-red
+        color: $red-base-color
+    .hero-blue
+        color: $blue-base-color
+    .hero-subtitle
+        font-size: 69px
+        font-weight: 400
+        letter-spacing: 8px
+        margin-top: 8px
+    .subtitle
+        line-height: 2.4
+        font-size: 36px
+        font-weight: 400
+        margin-top: 8px
+        color: var(--muted)

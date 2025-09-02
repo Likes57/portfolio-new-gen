@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+html{
+  scrollbar-gutter: stable;
+}
+.project-details {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.back-button {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.back-button button {
+  position: relative;
+  z-index: 3;
+  border: none;
+  color: black;
+  font-size: 26px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #414141;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-button::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  animation: spin 5s linear infinite;
+  background: conic-gradient(#FB5959 0deg 180deg, #44B6C6 180deg 360deg);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.project-header {
+  margin-bottom: 30px;
+}
+
+.project-details h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.project-subtitle {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.project-tag {
+  display: inline-block;
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-main-image {
+  width: 100%;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-main-image img {
+  width: 100%;
+  display: block;
+}
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.project-description {
+  margin-bottom: 40px;
+}
+
+.project-description h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.project-description h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 290px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+
+.project-description p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #B9B9BA;
+  font-size: 16px;
+}
+
+.project-meta {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.meta-item {
+  margin-bottom: 25px;
+}
+
+.meta-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.meta-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.project-gallery {
+  margin-top: 60px;
+}
+
+.project-gallery h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.project-gallery h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 225px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Стилі для модального вікна */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+  will-change: transform, opacity;
+  visibility: hidden;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1001;
+  will-change: opacity;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1002;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
   color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  will-change: opacity;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-close:hover {
+  color: #44B6C6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modal-image-container {
+  overflow-y: auto;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  will-change: transform;
+  transform-origin: center;
+  scrollbar-width: thin;
+  scrollbar-color: #44B6C6 rgba(0, 0, 0, 0.2);
+}
+
+.modal-image-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-image-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-image-container::-webkit-scrollbar-thumb {
+  background-color: #44B6C6;
+  border-radius: 4px;
+}
+
+.modal-image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  transform-origin: center;
+}
+
+.project a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .project-info-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-details h1 {
+    font-size: 32px;
+  }
+
+  .project-subtitle {
+    font-size: 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }

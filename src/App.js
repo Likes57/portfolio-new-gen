@@ -1,16 +1,21 @@
-import React from 'react';
-import Dropdown from './component/Dropdown';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NewGenMainPage from "./pages/MainPage";
+import ProjectDetails from "./components/ProjectDetails";
+import portfolioData from "./data/portfolioData";
+import "./styles/sass/main.css";
+import "./App.css";
 
-export default function App(){
-  const options = [
-    { value: '1', label: 'Перший варіант' },
-    { value: '2', label: 'Другий варіант' },
-    { value: '3', label: 'Третій варіант' },
-  ];
+function App() {
+    return (
+        <Router basename={process.env.PUBLIC_URL}>
+            <Routes>
+                <Route path="/" element={<NewGenMainPage />} />
+                <Route path="/project/:id" element={<ProjectDetails projects={portfolioData} />} />
+            </Routes>
+        </Router>
 
-  return (
-      <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }}>
-        <Dropdown label="Мій Dropdown" options={options} />
-      </div>
-  );
+    );
 }
+
+export default App;

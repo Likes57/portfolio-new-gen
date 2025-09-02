@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 40px;
+  padding: 36px 0;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.8), rgba(0, 0, 0, 0.9));
+  width: 100%;
+}
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-left {
+  max-width: 520px;
+}
+
+.footer-right {
+  text-align: right;
+}
+.footer-right .email {
+  font-weight: 700;
+  color: var(--accent-1);
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.logo img {
+  height: 36px;
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=header.css.map */
