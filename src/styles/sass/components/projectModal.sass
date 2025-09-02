@@ -1,0 +1,82 @@
+.image-modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1000
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    will-change: transform, opacity
+    visibility: hidden
+
+.modal-overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.85)
+    z-index: 1001
+    will-change: opacity
+
+.modal-content
+    position: relative
+    z-index: 1002
+    width: 90%
+    max-width: 1200px
+    max-height: 90vh
+    display: flex
+    flex-direction: column
+    will-change: transform, opacity
+    transform-origin: center
+
+.modal-close
+    position: absolute
+    top: -40px
+    right: 0
+    width: 40px
+    height: 40px
+    background: transparent
+    border: none
+    color: white
+    font-size: 28px
+    cursor: pointer
+    z-index: 1003
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: color 0.2s
+    will-change: opacity
+    &:hover
+        color: #44B6C6
+
+.modal-image-container
+    overflow-y: auto
+    max-height: 90vh
+    border-radius: 10px
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3)
+    background-color: white
+    will-change: transform
+    transform-origin: center
+    scrollbar-width: thin
+    scrollbar-color: #44B6C6 rgba(0, 0, 0, 0.2)
+
+    &::-webkit-scrollbar
+        width: 8px
+
+    &::-webkit-scrollbar-track
+        background: rgba(0, 0, 0, 0.2)
+        border-radius: 4px
+
+    &::-webkit-scrollbar-thumb
+        background-color: #44B6C6
+        border-radius: 4px
+
+    img
+        display: block
+        width: 100%
+        height: auto
+        background-color: white
+        transform-origin: center

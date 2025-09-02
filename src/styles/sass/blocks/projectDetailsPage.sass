@@ -1,0 +1,36 @@
+.back-button
+    position: fixed
+    left: 30px
+    bottom: 30px
+    display: inline-block
+    width: 80px
+    height: 80px
+    button
+        position: relative
+        z-index: 3
+        border: none
+        color: black
+        font-size: 26px
+        cursor: pointer
+        transition: all 0.3s
+        background-color: #414141
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+    &::after
+        content: ""
+        position: absolute
+        inset: -6px
+        border-radius: 50%
+        z-index: 2
+        pointer-events: none
+        transform-origin: 50% 50%
+        animation: spin 5s linear infinite
+        background: conic-gradient(#FB5959 0deg 180deg, #44B6C6 180deg 360deg)
+@keyframes spin
+    to
+        transform: rotate(360deg)

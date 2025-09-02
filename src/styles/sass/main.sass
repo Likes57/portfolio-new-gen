@@ -71,9 +71,14 @@ input::-ms-reveal,
 input::-ms-clear
     display: none
 
+html
+    scrollbar-gutter: stable
+body
+    margin: 0
+    background-color: #1E1F26
+    color: #fff
 
 //Шрифт
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap')
 *
@@ -84,12 +89,18 @@ input::-ms-clear
 @import config
 
 @import 'blocks/mainPage'
+@import 'blocks/projectDetailsPage'
 
 @import 'components/header'
+@import 'components/footer'
+
 @import 'components/hero'
 @import 'components/expertise'
 @import 'components/works'
 @import 'components/portfolio'
-@import 'components/footer'
+
+@import 'components/projectDetails'
+@import 'components/projectGallery'
+@import 'components/projectModal'
 
 
