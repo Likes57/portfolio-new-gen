@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Dropdown from './component/Dropdown';
 
-function App() {
+export default function App(){
+  const options = [
+    { value: '1', label: 'Перший варіант' },
+    { value: '2', label: 'Другий варіант' },
+    { value: '3', label: 'Третій варіант' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center' }}>
+        <Dropdown label="Мій Dropdown" options={options} />
+      </div>
   );
 }
-
-export default App;
