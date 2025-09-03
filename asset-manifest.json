@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/portfolio-new-gen/static/css/main.9c6d1aa0.css",
-    "main.js": "/portfolio-new-gen/static/js/main.71aafe01.js",
-    "static/js/453.2b4bec6e.chunk.js": "/portfolio-new-gen/static/js/453.2b4bec6e.chunk.js",
-    "static/media/Frame 42.svg": "/portfolio-new-gen/static/media/Frame 42.3add7bd5658d296784426da7519656e0.svg",
-    "static/media/MainPage.png": "/portfolio-new-gen/static/media/MainPage.c55caafae6f12885bfc8.png",
-    "static/media/Frame 40.svg": "/portfolio-new-gen/static/media/Frame 40.a7d9ac960123d7d2f39a7bc0209d3089.svg",
-    "static/media/AutoParkPage.png": "/portfolio-new-gen/static/media/AutoParkPage.82e4b09fdd9a0924f612.png",
-    "static/media/Frame 41.svg": "/portfolio-new-gen/static/media/Frame 41.e5790b033822f9960e63ea24c549b3e7.svg",
-    "static/media/BusRoutePage.png": "/portfolio-new-gen/static/media/BusRoutePage.1c5ea719b1c259e45b2d.png",
-    "static/media/Frame 44.svg": "/portfolio-new-gen/static/media/Frame 44.24ce997507f87ac6437c5a46304cf914.svg",
-    "static/media/Frame 43.svg": "/portfolio-new-gen/static/media/Frame 43.01e652fe5424f9a3468e3ba215062321.svg",
-    "static/media/Frame 45.svg": "/portfolio-new-gen/static/media/Frame 45.694ce88120a55923a64dc0551d56ecbb.svg",
-    "static/media/decor-pwa.svg": "/portfolio-new-gen/static/media/decor-pwa.c70e9dbd1821032df060763bd8f72d34.svg",
-    "static/media/vector-wp.svg": "/portfolio-new-gen/static/media/vector-wp.c5233eb42abeda262d7b143e1df3980f.svg",
-    "static/media/vector-react.svg": "/portfolio-new-gen/static/media/vector-react.9238d1b2d455c84a17fbc76554cb6126.svg",
-    "static/media/logo.svg": "/portfolio-new-gen/static/media/logo.492798a1054378a248ad0b0803be4c79.svg",
-    "static/media/N.svg": "/portfolio-new-gen/static/media/N.9462b8de885c773e503009a594f85f98.svg",
-    "static/media/vector-pc.svg": "/portfolio-new-gen/static/media/vector-pc.6556b647b5c7e6e5739f2ce17de6c903.svg",
-    "index.html": "/portfolio-new-gen/index.html",
-    "main.9c6d1aa0.css.map": "/portfolio-new-gen/static/css/main.9c6d1aa0.css.map",
-    "main.71aafe01.js.map": "/portfolio-new-gen/static/js/main.71aafe01.js.map",
-    "453.2b4bec6e.chunk.js.map": "/portfolio-new-gen/static/js/453.2b4bec6e.chunk.js.map"
+    "main.css": "/static/css/main.9c6d1aa0.css",
+    "main.js": "/static/js/main.68f75983.js",
+    "static/js/453.2b4bec6e.chunk.js": "/static/js/453.2b4bec6e.chunk.js",
+    "static/media/Frame 42.svg": "/static/media/Frame 42.3add7bd5658d296784426da7519656e0.svg",
+    "static/media/MainPage.png": "/static/media/MainPage.c55caafae6f12885bfc8.png",
+    "static/media/Frame 40.svg": "/static/media/Frame 40.a7d9ac960123d7d2f39a7bc0209d3089.svg",
+    "static/media/AutoParkPage.png": "/static/media/AutoParkPage.82e4b09fdd9a0924f612.png",
+    "static/media/Frame 41.svg": "/static/media/Frame 41.e5790b033822f9960e63ea24c549b3e7.svg",
+    "static/media/BusRoutePage.png": "/static/media/BusRoutePage.1c5ea719b1c259e45b2d.png",
+    "static/media/Frame 44.svg": "/static/media/Frame 44.24ce997507f87ac6437c5a46304cf914.svg",
+    "static/media/Frame 43.svg": "/static/media/Frame 43.01e652fe5424f9a3468e3ba215062321.svg",
+    "static/media/Frame 45.svg": "/static/media/Frame 45.694ce88120a55923a64dc0551d56ecbb.svg",
+    "static/media/decor-pwa.svg": "/static/media/decor-pwa.c70e9dbd1821032df060763bd8f72d34.svg",
+    "static/media/vector-wp.svg": "/static/media/vector-wp.c5233eb42abeda262d7b143e1df3980f.svg",
+    "static/media/vector-react.svg": "/static/media/vector-react.9238d1b2d455c84a17fbc76554cb6126.svg",
+    "static/media/logo.svg": "/static/media/logo.492798a1054378a248ad0b0803be4c79.svg",
+    "static/media/N.svg": "/static/media/N.9462b8de885c773e503009a594f85f98.svg",
+    "static/media/vector-pc.svg": "/static/media/vector-pc.6556b647b5c7e6e5739f2ce17de6c903.svg",
+    "index.html": "/index.html",
+    "main.9c6d1aa0.css.map": "/static/css/main.9c6d1aa0.css.map",
+    "main.68f75983.js.map": "/static/js/main.68f75983.js.map",
+    "453.2b4bec6e.chunk.js.map": "/static/js/453.2b4bec6e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c6d1aa0.css",
-    "static/js/main.71aafe01.js"
+    "static/js/main.68f75983.js"
   ]
 }
