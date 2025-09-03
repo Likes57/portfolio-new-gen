@@ -6,8 +6,6 @@
     justify-content: center
     position: relative
     overflow: hidden
-    margin-bottom: 40px
-    min-height: 320px
     background-color: rgba(10,15,18,0.95)
     z-index: 102
     &::before
@@ -25,7 +23,7 @@
     .brand, .hero-red, .hero-blue
         font-weight: 100
         font-family: Jaro, serif
-        font-size: 120px
+        font-size: clamp(90px, 11vw, 120px)
     .brand
         line-height: 0.6
         letter-spacing: 4px
@@ -34,13 +32,13 @@
     .hero-blue
         color: $blue-base-color
     .hero-subtitle
-        font-size: 69px
+        font-size: clamp(49px, 6.3vw, 69px)
         font-weight: 400
         letter-spacing: 8px
         margin-top: 8px
     .subtitle
         line-height: 2.4
-        font-size: 36px
+        font-size: clamp(20px, 4vw, 36px)
         font-weight: 400
         margin-top: 8px
         color: var(--muted)

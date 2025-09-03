@@ -6,24 +6,31 @@
 .container
     width: 100%
     max-width: 1200px
-    margin-top: 80px
-
+    margin-top: 20px
 .section
     width: 100%
     padding: 40px 0 60px 0
+/* телефони */
+@media (max-width: 767px)
+    .container
+        max-width: 90vw
 
-.section-title
-    font-size: 75px
-    font-weight: 600
-    text-align: center
-    margin-bottom: 35px
-    letter-spacing: 1px
+        margin-top: 0
+    .section
+        padding: 40px 0 0 0
+/* Планшети */
+@media (min-width: 768px) and (max-width: 1439px)
+    .container
+        max-width: 90vw
 
-.header-bg
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 75px
-    z-index: 101
-    background-color: rgba(30, 31, 38, 0.9)
+        margin-top: 0
+    .section
+        padding: 40px 0 20px 0
+/* 2k+ монітори */
+@media (min-width: 1920px)
+    .container
+        max-width: 1500px
+
+
+
+

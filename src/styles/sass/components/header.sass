@@ -6,18 +6,45 @@
     z-index: 103
     padding: 20px 50px
     align-items: center
+    height: 75px
+    @media (max-width: 1199px)
+        padding: 10px 20px
+        height: 65px
+    @media (max-width: 415px)
+        padding: 10px 10px
+        height: 55px
+    @media (max-width: 366px)
+        display: none
+.header-bg
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 75px
+    z-index: 101
+    background-color: rgba(30, 31, 38, 0.9)
+    @media (max-width: 1199px)
+        height: 65px
+    @media (max-width: 415px)
+        height: 55px
+    @media (max-width: 366px)
+        display: none
 .logo
     grid-column: 1
+    display: block
     img
         height: 35px
+@media (max-width: 1199px)
+    .logo
+        display: none
 .nav-container
     grid-column: 2
     .nav
         display: flex
-        gap: 60px
+        gap: clamp(20px, 6vw, 60px)
         counter-reset: link-counter
         a
-            font-size: 25px
+            font-size: clamp(13px, 2vw, 25px)
             color: $text-color
             text-decoration: none
             position: relative
@@ -28,4 +55,6 @@
                 counter-increment: link-counter
                 content: counter(link-counter, decimal-leading-zero) " "
                 color: gray
-                font-size: 14px
+                font-size: clamp(10px, 1.2vw, 14px)
+                @media (max-width: 800px)
+                    right: -15px

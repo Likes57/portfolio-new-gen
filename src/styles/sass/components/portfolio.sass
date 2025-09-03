@@ -3,7 +3,10 @@
     display: grid
     grid-template-columns: repeat(3,1fr)
     gap: 20px
-
+    @media (max-width: 955px)
+        grid-template-columns: repeat(2,1fr)
+    @media (max-width: 600px)
+        grid-template-columns: repeat(1,1fr)
 .project
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15))
     border-radius: 8px
@@ -15,13 +18,12 @@
         text-decoration: none
         color: inherit
         display: block
-        height: 100%
+
     &:hover
         transform: translateY(-10px)
     img
         width: 100%
-        height: 300px
-        object-fit: cover
+
     .meta
         padding: 22px
         background: $dark-base-color

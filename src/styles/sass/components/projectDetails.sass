@@ -1,13 +1,21 @@
 .project-header
     margin-bottom: 30px
+.project-details
+    margin-top: 90px
+    @media (max-width: 1200px)
+        margin-top: 75px
+    @media (max-width: 650px)
+        margin-top: 65px
+    @media (max-width: 366px)
+        margin-top: 15px
 
 .project-details h1
-    font-size: 64px
+    font-size: clamp(40px, 9vw, 64px)
     margin-bottom: 10px
     font-weight: 700
 
 .project-subtitle
-    font-size: 64px
+    font-size: clamp(35px, 7vw, 64px)
     margin-bottom: 20px
     color: #ffffff
     font-weight: 400
@@ -24,66 +32,91 @@
     text-transform: uppercase
     letter-spacing: 1px
 
-.project-main-image
-    width: 100%
-    margin-bottom: 50px
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1)
-    border-radius: 12px
-    overflow: hidden
-
-    img
-        width: 100%
-        display: block
-
 .project-info-grid
     display: grid
     grid-template-columns: 2fr 1fr
+    grid-template-rows: auto auto
     gap: 40px
     margin-bottom: 60px
+    align-items: stretch
+    .project-main-image
+        width: 100%
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1)
+        border-radius: 12px
+        overflow: hidden
+        grid-column: 1
+        grid-row: 1 / span 2
+        img
+            width: 100%
+            display: block
 
-.project-description
-    margin-bottom: 40px
+    .project-description
+        grid-column: 2
+        grid-row: 1
+        h2
+            font-size: 28px
+            margin-bottom: 20px
+            position: relative
+            padding-bottom: 10px
+            width: max-content
+            &:after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 3px
+                background: linear-gradient(90deg, #007bff, #00c6ff)
+        p
+            line-height: 1.8
+            color: #B9B9BA
+            font-size: 16px
+            @media (max-width: 1198px)
+                font-size: 13px
+    .project-meta
+        background-color: #f8f9fa
+        padding: 30px
+        border-radius: 12px
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05)
+        grid-column: 2
+        grid-row: 2
+    .meta-item
+        h4
+            font-size: 18px
+            margin-bottom: 10px
+            color: #333
+            font-weight: 600
+        p
+            font-size: 16px
+            color: #555
+    .meta-item:nth-child(1)
+        margin-bottom: 25px
 
-    h2
-        font-size: 28px
-        margin-bottom: 20px
-        position: relative
-        padding-bottom: 10px
+@media (max-width: 1200px)
+    .project-info-grid
+        grid-template-columns: 1.5fr 1fr /* левая и правая часть */
+        gap: 20px /* расстояние между блоками */
 
-        &:after
-            content: ""
-            position: absolute
-            bottom: 0
-            left: 0
-            width: 290px
-            height: 3px
-            background: linear-gradient(90deg, #007bff, #00c6ff)
-
-    p
-        margin-bottom: 15px
-        line-height: 1.8
-        color: #B9B9BA
-        font-size: 16px
-
-.project-meta
-    background-color: #f8f9fa
-    padding: 30px
-    border-radius: 12px
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05)
-
-.meta-item
-    margin-bottom: 25px
-
-    h4
-        font-size: 18px
-        margin-bottom: 10px
-        color: #333
-        font-weight: 600
-
-    p
-        font-size: 16px
-        color: #555
-
+@media (max-width: 1060px)
+    .project-info-grid
+        grid-template-columns: 2fr 1fr
+        .project-main-image
+            grid-row: 1
+        .project-meta
+            grid-column: 1 / span 2
+            grid-row: 2
+@media (max-width: 767px)
+    .project-info-grid
+        grid-template-columns: 1fr
+        .project-main-image
+            grid-column: 1
+            grid-row: 1
+        .project-description
+            grid-column: 1
+            grid-row: 2
+        .project-meta
+            grid-column: 1
+            grid-row: 3
 .tech-tags
     display: flex
     flex-wrap: wrap

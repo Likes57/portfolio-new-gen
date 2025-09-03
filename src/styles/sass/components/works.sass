@@ -9,12 +9,21 @@
         justify-content: space-between
         .works-left
             h3
-                font-size: 96px
+                font-size: clamp(70px, 9vw, 96px)
                 font-weight: 600
                 margin: 0 0 16px 0
             p
                 color: var(--muted)
                 max-width: 420px
+                font-size: clamp(13px, 1.7vw, 17px)
         .works-right
             img
-                max-width: 550px
+                max-width: 500px
+                @media (max-width: 1199px)
+                    max-width: 450px
+                @media (max-width: 1199px)
+                    max-width: 450px
+                @media (max-width: 890px)
+                    max-width: 350px
+                @media (max-width: 675px)
+                    display: none

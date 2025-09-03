@@ -71,12 +71,12 @@ const ProjectDetails = ({ projects }) => {
 
                 
                 <div className="project-info-grid">
-                    <div className="project-info-left">
+
                         <div className="project-main-image">
                             <img src={project.img} alt={project.title} />
                         </div>
-                    </div>
-                    <div className="project-info-right">
+
+
                         <div className="project-description">
                             <h2>Project description</h2>
                             <p>{project.description}</p>
@@ -97,7 +97,7 @@ const ProjectDetails = ({ projects }) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+
 
                 </div>
                 
