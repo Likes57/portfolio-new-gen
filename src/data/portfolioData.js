@@ -1,78 +1,93 @@
-import frame40 from '../img/portfolio/FoodLine/main-photo/Frame 40.svg';
+import FoodLineMockup from '../img/portfolio/FoodLine/main-photo/FoodLineMockup.svg';
+import FoodLineMainPage from '../img/portfolio/FoodLine/project-gallery/FoodLineMainPage.png';
+import FoodLineProductPage from '../img/portfolio/FoodLine/project-gallery/FoodLineProductPage.png';
+import FoodLineProductDetailPage from '../img/portfolio/FoodLine/project-gallery/FoodLineProductDetailPage.png';
 
-import frame41 from '../img/portfolio/BusTicket/main-photo/Frame 41.svg';
-import frame411 from '../img/portfolio/BusTicket/project-gallery/MainPage.png';
-import frame4111 from '../img/portfolio/BusTicket/project-gallery/AutoParkPage.png';
-import frame41111 from '../img/portfolio/BusTicket/project-gallery/BusRoutePage.png';
+import BusMockup from '../img/portfolio/BusTicket/main-photo/BusMockup.svg';
+import MainPageBus from '../img/portfolio/BusTicket/project-gallery/MainPage.png';
+import AutoParkPageBus from '../img/portfolio/BusTicket/project-gallery/AutoParkPage.png';
+import BusRoutePage from '../img/portfolio/BusTicket/project-gallery/BusRoutePage.png';
 
-import frame42 from '../img/portfolio/Chronos/main-photo/Frame 42.svg';
+import ChronosMockup from '../img/portfolio/Chronos/main-photo/ChronosMockup.svg';
+import ChronosBasicInformation from '../img/portfolio/Chronos/project-gallery/ChronosBasicInformation.png';
+import ChronosTask from '../img/portfolio/Chronos/project-gallery/ChronosTask.png';
+import ChronosShedule from '../img/portfolio/Chronos/project-gallery/ChronosShedule.png';
 
-import frame43 from '../img/portfolio/LSpick/main-photo/Frame 43.svg';
+import LSpickMockup from '../img/portfolio/LSpick/main-photo/LSpickMockup.svg';
+import LSMainPage from '../img/portfolio/LSpick/project-gallery/LSMainPage.png';
+import LSPhone from '../img/portfolio/LSpick/project-gallery/LSPhone.png';
+import LSProductDetailPage from '../img/portfolio/LSpick/project-gallery/LSProductDetailPage.png';
 
-import frame44 from '../img/portfolio/CarsRent/main-photo/Frame 44.svg';
+import CarsMockup from '../img/portfolio/CarsRent/main-photo/CarsMockup.png';
+import CarAccountPage from '../img/portfolio/CarsRent/project-gallery/CarAccountPage.png';
+import CarClioPage from '../img/portfolio/CarsRent/project-gallery/CarClioPage.png';
+import CarMainPage from '../img/portfolio/CarsRent/project-gallery/CarMainPage.png';
 
-import frame45 from '../img/portfolio/MetalWest/main-photo/Frame 45.svg';
+import MetalMockup from '../img/portfolio/MetalWest/main-photo/MetalMockup.svg';
+import MetalInfoPage from '../img/portfolio/MetalWest/project-gallery/MetalInfoPage.png';
+import MetalSubCategoryPage from '../img/portfolio/MetalWest/project-gallery/MetalSubCategoryPage.png';
+import MetalProductPage from '../img/portfolio/MetalWest/project-gallery/MetalProductPage.png';
 
 const portfolioData = [
     { 
-        img: frame40, 
-        title: 'E-commerce website', 
-        subtitle: 'Інтернет-магазин з повним функціоналом',
+        img: FoodLineMockup,
+        title: 'Food price monitoring system',
+        subtitle: '(Food price comparison service)',
         tag: 'Web Development', 
-        description: 'Повноцінний інтернет-магазин з каталогом товарів, системою фільтрації, корзиною та оформленням замовлень. Проект включає адаптивний дизайн для всіх пристроїв та оптимізований для високої швидкості завантаження.',
+        description: 'The project aims to create a web service for monitoring and comparing food prices from different stores. The system automatically collects data via ParseHub, processes it using NLP models, and records it in a database. The result is a web service that allows users to quickly compare prices and find the best deals.',
         client: 'RetailTech Inc.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
-        galleryImages: [frame40, frame41, frame42]
+        technologies: ['ParseHub', 'React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Python'],
+        galleryImages: [FoodLineProductPage, FoodLineMainPage,  FoodLineProductDetailPage]
     },
     { 
-        img: frame41, 
+        img: BusMockup,
         title: 'Ticket Sales',
         subtitle: '(Solutions for Selling Services)',
         tag: 'Web Development', 
         description: 'The site was developed to replace the old version of the site. An increase in the flow of new customers was achieved. Ticket sales and data storage in Google Sheets were implemented for display to dispatchers.',
-        client: 'Fashion Brand',
-        technologies: ['React', 'Redux', 'WordPress', 'Custom Themes'],
-        galleryImages: [frame411, frame4111, frame41111]
+        client: 'BusAuto star',
+        technologies: ['React', 'Redux', 'WordPress', 'Custom Themes', 'Docker', 'MySQL'],
+        galleryImages: [MainPageBus, BusRoutePage, AutoParkPageBus]
     },
     { 
-        img: frame42, 
+        img: ChronosMockup,
         title: 'Chronos for University', 
-        subtitle: 'Система управління розкладом',
+        subtitle: '(Schedule management system)',
         tag: 'Web Development', 
-        description: 'Веб-додаток для планування та керування розкладом занять в університеті. Система має функціонал для студентів, викладачів та адміністраторів з різними рівнями доступу.',
-        client: 'National University',
-        technologies: ['React', 'Redux', 'MongoDB', 'Express', 'Docker'],
-        galleryImages: [frame42, frame44, frame45]
+        description: 'A web application for planning and managing university class schedules. The system has functionality for students, teachers, and administrators with different levels of access.',
+        client: 'National Technical University «Kharkiv Polytechnic Institute»',
+        technologies: ['React', 'Redux', 'Express', 'MongoDB',  'Docker'],
+        galleryImages: [ChronosShedule, ChronosTask, ChronosBasicInformation ]
     },
     { 
-        img: frame43, 
-        title: 'Professional Website', 
-        subtitle: 'Корпоративний веб-сайт',
+        img: LSpickMockup,
+        title: 'Smart choice of gadgets',
+        subtitle: '(Smart gadget choices)',
         tag: 'Web Development', 
-        description: 'Професійний веб-сайт для компанії з динамічним контентом, інтерактивними елементами та системою зворотного звʼязку. Сайт оптимізований для пошукових систем.',
+        description: 'A service for collecting reviews from various online stores using ParseHub and displaying content in a user-friendly format. Additional functionality has been developed, such as visualization of the popularity of models and brands.',
         client: 'Corporate Solutions LLC',
-        technologies: ['WordPress', 'PHP', 'JavaScript', 'MySQL'],
-        galleryImages: [frame43, frame40, frame44]
+        technologies: ['React', 'Redux', 'Express', 'MongoDB',  'Docker'],
+        galleryImages: [LSProductDetailPage, LSMainPage, LSPhone]
     },
     { 
-        img: frame44, 
+        img: CarsMockup,
         title: 'New Website Launch', 
         subtitle: 'Запуск нового проекту',
         tag: 'Web Development', 
-        description: 'Розробка та запуск нового веб-сайту з нуля, включаючи дизайн, розробку, тестування та SEO-оптимізацію. Проект включає інтеграцію з соціальними мережами та аналітичними сервісами.',
+        description: 'Development and launch of a new website from scratch, including design, development, testing, and SEO optimization. The project includes integration with social networks and analytics services.',
         client: 'StartUp Vision',
         technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
-        galleryImages: [frame44, frame42, frame45]
+        galleryImages: [CarMainPage,CarAccountPage, CarClioPage ]
     },
     { 
-        img: frame45, 
+        img: MetalMockup,
         title: 'Corporate Websites', 
         subtitle: 'Портфоліо корпоративних сайтів',
         tag: 'Web Development', 
-        description: 'Розробка серії корпоративних веб-сайтів для різних компаній з єдиним стилем, але унікальними елементами для кожного клієнта. Проекти включають системи управління контентом та інтеграцію з CRM.',
+        description: 'A professional website for a company with dynamic content, interactive elements, and a feedback system. The site is optimized for search engines.',
         client: 'Multiple Corporate Clients',
         technologies: ['WordPress', 'Custom Themes', 'PHP', 'jQuery', 'REST API'],
-        galleryImages: [frame45, frame43, frame41]
+        galleryImages: [MetalSubCategoryPage, MetalInfoPage, MetalProductPage]
     },
 ];
 
