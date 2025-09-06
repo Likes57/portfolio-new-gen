@@ -128,5 +128,4 @@ export default function NewGenMainPage() {
     );
 }
 
-// Експортуємо дані проектів для зручності
 export { portfolioData };

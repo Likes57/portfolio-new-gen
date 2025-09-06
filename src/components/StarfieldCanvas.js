@@ -12,11 +12,9 @@ const StarfieldCanvas = () => {
     const resizeCanvas = () => {
       const dpr = window.devicePixelRatio || 1;
 
-      // Фізичні пікселі
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
 
-      // Відображається як 100% ширини/висоти
       canvas.style.width = `${window.innerWidth}px`;
       canvas.style.height = `${window.innerHeight}px`;
 

@@ -8,7 +8,6 @@ const ImageModal = ({ image, alt, isOpen, onClose }) => {
   const overlayRef = useRef(null);
   const closeBtnRef = useRef(null);
 
-  // Ефект для відкриття модального вікна
   useEffect(() => {
     if (isOpen && window.innerWidth >= 805) {   // ✅ додаємо перевірку ширини
       document.body.style.overflow = 'hidden';

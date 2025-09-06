@@ -7,10 +7,8 @@ const Header = () => {
     const navigate = useNavigate();
     
     const scrollToSection = (sectionId) => {
-        // Якщо ми не на головній сторінці, спочатку перенаправляємо на головну
         if (location.pathname !== '/') {
             navigate('/');
-            // Після перенаправлення потрібен невеликий таймаут, щоб DOM встиг оновитися
             setTimeout(() => {
                 const element = document.getElementById(sectionId);
                 if (element) {
@@ -18,7 +16,6 @@ const Header = () => {
                 }
             }, 100);
         } else {
-            // Якщо ми вже на головній сторінці, просто прокручуємо до секції
             const element = document.getElementById(sectionId);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
