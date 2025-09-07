@@ -10,12 +10,30 @@ const Footer = () => {
                     <p>Have an exciting project you need help with? Send me an email or contact me via instant message!</p>
                 </div>
                 <div className="footer-right">
-                    <div className="email"><span className="footer-red">n</span>ew<span className="footer-blue">g</span>en@gmail.dev</div>
+                    <a className="email" href="mailto:new.gens.devs@gmail.com" aria-label="Написать на new.gens.devs@gmail.com">
+                        <span className="footer-red">n</span>ew.<span className="footer-blue">g</span>ens.devs@gmail.com
+                    </a>
                     <div>
-                        <div className="footer-link">Messenger</div>
-                        <div className="footer-link">LinkedIn</div>
-                        <div className="footer-link">Instagram</div>
-                        <div className="footer-link">GitHub</div>
+                        <a
+                            className="footer-link"
+                            href="https://t.me/Likes57"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Messenger
+                        </a>
+                    </div>
+                        {/*<div className="footer-link">LinkedIn</div>*/}
+                        {/*<div className="footer-link">Instagram</div>*/}
+                    <div>
+                        <a
+                            className="footer-link"
+                            href="https://t.me/Likes57"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
